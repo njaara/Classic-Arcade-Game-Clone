@@ -42,15 +42,26 @@ Enemy.prototype.render = function() {
      }
 }*/
 
-Enemy.prototype.checkCollision = function() {        // referenced https://github.com/aviaryan/ud-arcade-game/blob/master/js/app.js and
-  if(player.x + 25 <= this.x + 88 &&           // https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
-     player.x + 76 >= this.x + 11 &&
-     player.y + 73 <=  this.y + 100 &&
-     player.y + 131 >= this.y + 90) {
+/*Enemy.prototype.checkCollision = function() {        // referenced https://github.com/aviaryan/ud-arcade-game/blob/master/js/app.js and
+  if(player.x + 20 <= this.x + 80 &&           // https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
+     player.x + 70 >= this.x + 8 &&
+     player.y + 70 <=  this.y + 100 &&
+     player.y + 120 >= this.y + 85) {
        loseModal();
        reset();
      }
-};
+};*/
+
+Enemy.prototype.checkCollision = function() {        // referenced https://github.com/aviaryan/ud-arcade-game/blob/master/js/app.js and
+  if(player.x <= this.x + 70 &&           // https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
+     player.x + 70 >= this.x &&
+     player.y <= this.y + 40 &&
+     player.y + 40 >= this.y) {
+       loseModal();
+       reset();
+     }
+}
+
 
 // Now write your own player class
 // This class requires an update(), render() and
