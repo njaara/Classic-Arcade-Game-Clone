@@ -22,8 +22,6 @@ Enemy.prototype.update = function(dt) {
       this.x = -100;
       this.speed = Math.floor(Math.random() * (105 - 50) + 50)
     }
-    //this.checkCollision();
-    //checkCollision(player, this);
     this.checkCollision();
 };
 
@@ -31,26 +29,6 @@ Enemy.prototype.update = function(dt) {
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-
-/*function checkCollision(player, enemy) {        // referenced https://github.com/aviaryan/ud-arcade-game/blob/master/js/app.js and
-  if(player.x + 25 <= enemy.x + 88 &&           // https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
-     player.x + 76 >= enemy.x + 11 &&
-     player.y + 73 <=  enemy.y + 100 &&
-     player.y + 131 >= enemy.y + 90) {
-       loseModal();
-       reset();
-     }
-}*/
-
-/*Enemy.prototype.checkCollision = function() {        // referenced https://github.com/aviaryan/ud-arcade-game/blob/master/js/app.js and
-  if(player.x + 20 <= this.x + 80 &&           // https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
-     player.x + 70 >= this.x + 8 &&
-     player.y + 70 <=  this.y + 100 &&
-     player.y + 120 >= this.y + 85) {
-       loseModal();
-       reset();
-     }
-};*/
 
 Enemy.prototype.checkCollision = function() {        // referenced https://github.com/aviaryan/ud-arcade-game/blob/master/js/app.js and
   if(player.x <= this.x + 70 &&           // https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
@@ -61,7 +39,6 @@ Enemy.prototype.checkCollision = function() {        // referenced https://githu
        reset();
      }
 }
-
 
 // Now write your own player class
 // This class requires an update(), render() and
