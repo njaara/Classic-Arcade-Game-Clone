@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-- [Instructions](#instructions)
+- [Instructions](#game-installation)
 - [Contributing](#contributing)
 
 ## Game Installation
@@ -16,7 +16,6 @@
 - If your player gets hit, the game resets.
 
 ## Resources
-Resources
 https://github.com/lacyjpr/arcade/blob/master/js/app.js
 https://github.com/aviaryan/ud-arcade-game/blob/master/js/app.js
 https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
